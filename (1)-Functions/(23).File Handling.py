@@ -1,0 +1,7 @@
+f1=open("(0).Welcome.py","r+")
+#print(f1.read())
+f1.write("Hi")
+print(f1.read())
+print(f1.tell())
+f1.seek(12)
+f1.write("Hi")

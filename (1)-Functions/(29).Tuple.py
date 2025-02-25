@@ -1,0 +1,11 @@
+my_tuple=("abcd",147,2.43,"Tom",74.8)
+print(my_tuple)
+print(my_tuple[0])
+for i in range(2,5):
+    print(my_tuple[i])
+length=len(my_tuple)
+print(length)
+small_tuple=(222,"Tom")
+print(my_tuple+small_tuple)
+result=list(set(my_tuple)-set(small_tuple))
+print(result)
