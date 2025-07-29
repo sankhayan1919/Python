@@ -61,8 +61,8 @@ def coffee_cost():
 
 def coins():
   global total
-  print("Please insert coins")
-  coins_five=int(input("how many 5 rupees coin?"))
+  print("\nPlease insert coins")
+  coins_five=int(input("\nhow many 5 rupees coin?"))
   coins_ten=int(input("how many 10 rupees coin?"))
   coins_twenty=int(input("how many 20 rupees coin?"))
   total=coins_five*5+coins_ten*10+coins_twenty*20
@@ -73,7 +73,7 @@ def payment_success(your_payment,coffee_cost):
     global profit
     profit=profit+coffee_cost
     change=your_payment-coffee_cost
-    print(f"\n\nHere is your change: {change}rupees")
+    print(f"\nHere is your change: {change}rupees")
     return True
   else:
     print("\nSorry, this is not enough money\n\n")
@@ -82,17 +82,17 @@ def payment_success(your_payment,coffee_cost):
 def processor(coffee_name,order_ingredients):
     for item in order_ingredients:
       resources[item]=resources[item]-order_ingredients[item]
-    print("\nWait a little bit, your coffee is processing..................., grab some snacks.\n\n")
-    print(f"Here is you coffee: '{coffee_name}', Enjoy it!!\n\n")
+    print("\nWait a little bit, your coffee is processing..................., grab some snacks.\n")
+    print(f"Here is you coffee: '{coffee_name}', Enjoy it!!\n")
 
 machine_on=True
 while machine_on:
-  choice=input("What do you want?-\ncappuccino- 50rupees\nespresso- 45rupees\namericano- 35rupees\niced coffee- 45rupees\n'report' to know the quantity of the ingrediants and 'off' to switch of the machine:\n")
+  choice=input("\nWhat do you want?-\n\ncappuccino- 50rupees\namericano- 45rupees\nespresso- 35rupees\niced coffee- 45rupees\n\n'report' to know the quantity of the ingrediants and 'off' to switch of the machine:\n")
   if choice=="off":
     machine_on=False
   elif choice=="report":
+    print(f"\nMoney = {profit}rupees\n")
     print(resources)
-    print(f"Money=Rs{profit}")
   else:
     coffee_type = menu.get(choice)
     if coffee_type:
